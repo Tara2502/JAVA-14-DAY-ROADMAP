@@ -5,6 +5,9 @@ public class Expense {
     private double amount;
     private String category;
     private String month;
+    public Expense(){
+
+    }
 
     public Expense(
             String title,
@@ -29,7 +32,21 @@ public class Expense {
         this.category = category;
         this.month = month;
     }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
     public String getTitle() {
         return title;
     }

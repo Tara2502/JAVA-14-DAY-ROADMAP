@@ -1,8 +1,8 @@
 package app;
 
-import customException.ExpenseNotFoundException;
-import customException.ExpenseValidationException;
-import customException.InvalidCategoryException;
+import exceptions.ExpenseNotFoundException;
+import exceptions.ExpenseValidationException;
+import exceptions.InvalidCategoryException;
 import model.Expense;
 import service.ExpenseTrackerService;
 
@@ -62,8 +62,10 @@ public class ExpenseTrackerDemo {
         }
 
         // Handles any unexpected exception
+
         catch (Exception e) {
-            System.out.println("Unexpected error: " + e.getMessage());
+            System.out.println("Unexpected error occurred.");
+            e.printStackTrace();
         }
 
         System.out.println("\nProgram Finished.");

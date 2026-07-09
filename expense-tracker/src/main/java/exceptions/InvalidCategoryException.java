@@ -1,4 +1,4 @@
-package customException;
+package exceptions;
 
 public class InvalidCategoryException extends RuntimeException {
 
