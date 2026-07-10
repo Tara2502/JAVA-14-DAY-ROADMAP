@@ -20,14 +20,15 @@ public class ExpenseTrackerService {
     private static final Logger logger =
             LoggerFactory.getLogger(ExpenseTrackerService.class);
     public ExpenseTrackerService() {
-
-        repository = new ExpenseRepository();
-
-        try {
-            expenses = repository.loadExpenses();
+        this(new ExpenseRepository());
+    }
+    public ExpenseTrackerService(ExpenseRepository repository){
+        this.repository=repository;
+        try{
+            expenses= repository.loadExpenses();
         } catch (IOException e) {
-            logger.error("Unable to load expenses.", e);
-            expenses = new ArrayList<>();
+            logger.error("Unable to load expenses",e);
+            expenses=new ArrayList<>();
         }
     }
 
