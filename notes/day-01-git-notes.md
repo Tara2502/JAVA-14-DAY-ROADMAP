@@ -1,4 +1,4 @@
-\# Day 7 - Git \& GitHub Notes
+\# Day 1 - Git \& GitHub Notes
 
 
 
